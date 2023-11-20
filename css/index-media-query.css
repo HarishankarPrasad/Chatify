@@ -1,0 +1,63 @@
+
+@media only screen and (max-width: 768px) {
+  
+    .menu {
+      display: none;
+    }
+  
+    .logo {
+        display: none;
+    }
+    
+    #hamburger-menu {
+      display: block;
+      padding: 15px;
+      cursor: pointer;
+    }
+  
+    #hamburger-menu .line {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 5px 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+  
+    #hamburger-menu.open .line:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    #hamburger-menu.open .line:nth-child(2) {
+      opacity: 0;
+    }
+  
+    #hamburger-menu.open .line:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .menu.active {
+      display: block;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 999;
+      padding: 10px;
+    }
+  
+    .menu.active .links {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .menu.active li {
+      text-align: center;
+    }
+  
+    .menu.active a::after {
+      display: none;
+    }
+  }
+  
